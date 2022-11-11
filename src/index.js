@@ -3,17 +3,17 @@ const morgan = require("morgan");
 const {engine} = require("express-handlebars");
 const path = require("path");
 const app = express();
+const route = require("./routes")
 
 const port = 3000;
-
+app.use(express.urlencoded({extended: true}));
+app.use(express.json())
 app.use(morgan("combined"));
 app.use(express.static(path.join(__dirname, "public")))
 app.engine('hbs', engine({extname: '.hbs'}));
 app.set('view engine','hbs' )
 app.set('views', path.join(__dirname, '/resources/views/'))
-console.log(path.join(__dirname));
-app.get("/", (req, res) => {
-  res.render("home");
-});
+
+route(app)
 
 app.listen(port, () => console.log(`Start with port ${port}`));

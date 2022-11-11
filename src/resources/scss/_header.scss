@@ -1,8 +1,4 @@
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-}
+
 
 .header-title {
     font-size: 35px;
@@ -10,7 +6,7 @@
     font-weight: 700;
 }
 
-.title-logo {
+.header-title_logo {
     font-size: 20px;
     line-height: 30px;
 }
@@ -21,16 +17,3 @@
     margin-right: auto;
 }
 
-.wrap-inner {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto auto auto;
-    border: 1px dotted #ccc;
-    border-top: 0px;
-    padding: 1rem;
-}
-
-.mg-1 {
-    margin: 1rem !important;
-    width: auto;
-}
