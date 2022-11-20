@@ -1,22 +1,20 @@
 <div class="wrap-inner">
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
-    {{> card }}
+    <div class="container">
+        
+        <div class="row">
+            {{#each books}}
+            <div class="col-md-3 mb-3">
+                <div class="card card-book">
+                    <div class="card-img-top">
+                        <img class="mg-1" src="{{this.image}}" alt="Book title">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">{{this.name}}</h1>
+                        <p class="card-text mb-2">{{this.author}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
 </div>
