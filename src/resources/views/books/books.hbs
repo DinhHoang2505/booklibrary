@@ -1,0 +1,25 @@
+<div class="wrap-inner p-3">
+    <div class="container">
+        <div class="row">
+            {{#each books}}
+            <div class="col-xs-6 col-sm-4 col-md-3 col-xl-2 mb-3 p-1">
+                <div class="card card-book">
+                    <div class="card-img-top">
+                        <a href="books/{{this.slug}}">
+                            <img class="mg-1 card-img" src="{{this.image}}" alt="Book title">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">
+                            <a href="books/{{this.slug}}">
+                                {{this.name}}
+                            </a>
+                        </h1>
+                        <p class="card-text mb-2">{{this.author}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

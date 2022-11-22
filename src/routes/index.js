@@ -1,8 +1,9 @@
-const newRouter = require("./news");
+
 const homeRouter = require("./site");
+const booksController = require("./books");
 
 function route(app) {
-    app.use("/news", newRouter);
+    app.use("/books", booksController)
     app.use("/", homeRouter)
 }
 
