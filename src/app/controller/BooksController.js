@@ -12,10 +12,22 @@ class BooksController {
             )
             .catch(next)
     }
+
     // [GET] /books/create
     create(req, res, next) {
         res.render('books/createbook')
     }
+
+    // [POST] /books/store
+    store(req, res, next) {
+        const book = new Book(req.body);
+        book.save((err) => {
+            if (err) { return next(err); }
+            res.redirect('/books')
+        })
+        // res.send('Successfully created book')
+    }
+
     //[GET] /books/:slug
     show(req, res, next) {
         Book.findOne({ slug: req.params.slug })
@@ -26,6 +38,7 @@ class BooksController {
             )
             .catch(next)
     }
+
 }
 
 module.exports = new BooksController

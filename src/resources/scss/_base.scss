@@ -15,23 +15,20 @@ html {
 
     .container {
         .row {
-            margin: 0 -6px;
+            margin: 0 -0.75rem;
         }
 
         .form-inner {
-            margin: auto;
-
             form {
                 width: 100%;
-                display: flex;
-                flex-direction: column;
 
                 .form-group {
-                    display: flex;
-                    flex-direction: column;
                     width: 60%;
-                    text-align: center;
-                    margin: auto;
+                    margin: 1rem auto;
+
+                    label {
+                        margin-bottom: 0.5rem;
+                    }
 
                     .form-control {}
                 }
@@ -52,4 +49,19 @@ html {
 
 .pr-0 {
     padding-right: 0;
+}
+
+.create_book-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0.5rem;
+    color: red;
+}
+
+.create_book-icon {
+    svg {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
 }
